@@ -860,3 +860,35 @@ img {
   color: var(--color-text);
   margin-bottom: 1.5rem;
 }
+
+.btn--accent {
+  background: var(--color-accent);
+  color: var(--color-primary-dark);
+  border: 2px solid var(--color-accent);
+}
+
+.btn--accent:hover {
+  background: var(--color-accent-light);
+  border-color: var(--color-accent-light);
+}
+
+.calc__result {
+  margin-top: 1.5rem;
+  padding: 1.25rem;
+  background: var(--color-bg-alt);
+  border-radius: var(--radius);
+  text-align: center;
+}
+
+.calc__label {
+  font-size: 0.9rem;
+  color: var(--color-text-light);
+  margin-bottom: 0.4rem;
+}
+
+.calc__price {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 1.25rem;
+}

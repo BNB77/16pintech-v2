@@ -50,6 +50,7 @@
           <div class="hero__actions">
             <a class="btn btn--primary hero__btn" href="#selector">Подобрать услугу</a>
             <button class="btn btn--outline hero__btn" id="bookingTrigger">Записаться</button>
+            <button class="btn btn--accent hero__btn" id="calcTrigger">Рассчитать цену</button>
           </div>
         </div>
         <div class="hero__badges">
@@ -224,6 +225,56 @@
         </nav>
       </div>
     </footer>
+
+    <!-- ======================== MODAL CALC ======================== -->
+    <div class="modal" id="calcModal" role="dialog" aria-modal="true" aria-labelledby="calcTitle">
+      <div class="modal__overlay"></div>
+      <div class="modal__window">
+        <button class="modal__close" aria-label="Закрыть">&times;</button>
+        <h2 class="modal__title" id="calcTitle">Рассчитать стоимость</h2>
+
+        <div class="modal__field">
+          <label class="modal__label" for="calcService">Услуга</label>
+          <select class="modal__input" id="calcService">
+            <option value="">— Выберите услугу —</option>
+            <option value="chip1">Чип-тюнинг Stage 1</option>
+            <option value="chip2">Чип-тюнинг Stage 2</option>
+            <option value="diag">Диагностика ЭБУ</option>
+            <option value="dpf">Удаление DPF / EGR</option>
+            <option value="akpp">Настройка АКПП / DSG</option>
+            <option value="adblue">Отключение AdBlue / SCR</option>
+          </select>
+        </div>
+        <div class="modal__field">
+          <label class="modal__label" for="calcEngine">Объём двигателя</label>
+          <select class="modal__input" id="calcEngine">
+            <option value="">— Выберите объём —</option>
+            <option value="small">до 1.6 л</option>
+            <option value="mid">1.6 – 2.0 л</option>
+            <option value="large">2.0 – 2.5 л</option>
+            <option value="xl">свыше 2.5 л</option>
+          </select>
+        </div>
+        <div class="modal__field">
+          <label class="modal__label" for="calcOrigin">Производитель</label>
+          <select class="modal__input" id="calcOrigin">
+            <option value="">— Выберите —</option>
+            <option value="eu">Европейский (BMW, VW, Mercedes…)</option>
+            <option value="jp">Японский / Корейский (Toyota, Hyundai…)</option>
+            <option value="us">Американский (Ford, Jeep…)</option>
+            <option value="cn">Китайский (Geely, Haval…)</option>
+          </select>
+        </div>
+
+        <button class="btn btn--primary modal__submit calc__btn">Рассчитать</button>
+
+        <div class="calc__result" hidden>
+          <p class="calc__label">Стоимость <strong class="calc__service-name"></strong>:</p>
+          <p class="calc__price"></p>
+          <a class="btn btn--outline modal__submit" href="tel:+79035348046">📞 Позвонить и уточнить</a>
+        </div>
+      </div>
+    </div>
 
     <!-- ======================== MODAL ======================== -->
     <div class="modal" id="bookingModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
